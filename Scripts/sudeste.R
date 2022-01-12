@@ -13,16 +13,20 @@ View(prices)
 ### Removendo Coluna Indesejada (...1)
 prices$...1 <- NULL
 
-sudeste <- group_by(prices, REGIÃO = 'SUDESTE')
+sudeste <- prices%>%filter(REGIÃO == 'SUDESTE')
 View(sudeste)
 
 ### Saber os niveis de produto que existem
 factor(sudeste$PRODUTO)
 
 ### Criação dos sub-grupos de produtos
-sudeste_etanol <- group_by(sudeste, PRODUTO = 'ETANOL HIDRATADO')
-sudeste_gasolina_comum <- group_by(sudeste, PRODUTO = 'GASOLINA COMUM')
-sudeste_glp <- group_by(sudeste, PRODUTO = 'GLP')
-sudeste_gnv <- group_by(sudeste, PRODUTO = 'GNV')
-sudeste_oleo_diesel <- group_by(sudeste, PRODUTO = 'ÓLEO DIESEL')
-sudeste_oleo_diesel_s10 <- group_by(sudeste, PRODUTO = 'ÓLEO DIESEL S10')
+
+
+
+sudeste_etanol <- sudeste%>%filter(PRODUTO=='ETANOL HIDRATADO',)
+sudeste_gasolina_comum <- sudeste%>%filter(PRODUTO == 'GASOLINA COMUM',)
+sudeste_glp <- sudeste%>%filter(PRODUTO == "GLP",)
+sudeste_gnv <- sudeste%>%filter(PRODUTO == 'GNV',)
+sudeste_oleo_diesel <- sudeste%>%filter(PRODUTO == 'ÓLEO DIESEL',)
+sudeste_oleo_diesel_s10 <- sudeste%>%filter(PRODUTO == 'ÓLEO DIESEL S10',)
+
