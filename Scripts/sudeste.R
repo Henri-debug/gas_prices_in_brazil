@@ -30,7 +30,7 @@ sudeste_oleo_diesel_s10 <- sudeste%>%filter(PRODUTO == 'ÓLEO DIESEL S10',)
 ### Plotar grafico ano x preço médio revenda ETANOL
 sudeste_etanol_revenda <- group_by(sudeste_etanol, ANO)%>%summarise(Média_Etanol = mean(`PREÇO MÉDIO REVENDA`))
 ggplot(sudeste_etanol_revenda, aes(x = ANO,y = Média_Etanol))+geom_point()+geom_line()+theme_minimal()+labs(
-  title = "Preço médio de revenda do etanol",
+  title = "Preço médio de revenda do Etanol",
   subtitle = "(2004-2019)",
   x= "Ano",
   y= "Valor médio do Etanol"
@@ -39,7 +39,7 @@ ggplot(sudeste_etanol_revenda, aes(x = ANO,y = Média_Etanol))+geom_point()+geom
 ### Plotar grafico ano x preço médio revenda GASOLINA COMUM
 sudeste_gasolina_revenda <- group_by(sudeste_gasolina_comum, ANO)%>%summarise(Média_Gasolina = mean(`PREÇO MÉDIO REVENDA`))
 ggplot(sudeste_gasolina_revenda, aes(x = ANO, y = Média_Gasolina))+geom_point()+geom_line()+theme_minimal()+labs(
-  title = "Preço médio de revenda da gasolina comum",
+  title = "Preço médio de revenda da Gasolina Comum",
   subtitle = "(2004-2019)",
   x= "Ano",
   y= "Valor médio da Gasolina"
@@ -66,7 +66,7 @@ ggplot(sudeste_gnv_revenda, aes(x = ANO,y = Média_GNV))+geom_point()+geom_line(
 ### Plotar grafico ano x preço médio revenda ÓLEO DIESEL
 sudeste_oleo_diesel_revenda <- group_by(sudeste_oleo_diesel, ANO)%>%summarise(Média_O_DIESEL = mean(`PREÇO MÉDIO REVENDA`))
 ggplot(sudeste_oleo_diesel_revenda, aes(x = ANO, y = Média_O_DIESEL))+geom_line()+geom_point()+theme_minimal()+labs(
-  title = "Preço médio de revenda do óleo diesel",
+  title = "Preço médio de revenda do Óleo Diesel",
   subtitle = "(2004-2019)",
   x= "Ano",
   y= "Valor médio do Óleo Diesel"
@@ -75,7 +75,7 @@ ggplot(sudeste_oleo_diesel_revenda, aes(x = ANO, y = Média_O_DIESEL))+geom_line
 ### Plotar grafico ano x preço médio revenda ÓLEO DIESEL S10
 sudeste_oleo_diesel_s10_revenda <- group_by(sudeste_oleo_diesel_s10, ANO)%>%summarise(Média_O_DIESEL_S10 = mean(`PREÇO MÉDIO REVENDA`))
 ggplot(sudeste_oleo_diesel_s10_revenda, aes(x = ANO, y = Média_O_DIESEL_S10))+geom_point()+geom_line()+theme_minimal()+labs(
-  title = "Preço médio  de revenda do óleo diesel s10",
+  title = "Preço médio de revenda do Óleo Diesel s10",
   subtitle = "(2004-2019)",
   x= "Ano",
   y= "Valor médio do Óleo Diesel S10"
