@@ -24,7 +24,7 @@ centroOeste_oleo_diesel_s10_revenda <- cbind(REGIAO = 'CENTRO OESTE', centroOest
 
 oleo_diesel_s10_regional <- rbind(sudeste_oleo_diesel_s10_revenda,nordeste_oleo_diesel_s10_revenda,sul_oleo_diesel_s10_revenda,norte_oleo_diesel_s10_revenda,centroOeste_oleo_diesel_s10_revenda)
 
-
+ 
 
 ggplot(oleo_diesel_s10_regional, aes(x = ANO , y = Média_O_DIESEL_S10)) + 
   geom_line(aes(color = REGIAO),size = 1) + 
